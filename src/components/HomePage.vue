@@ -7,8 +7,11 @@
       <a href="#">Contact</a>
     </div>
     <div class="content">
-      <BaseLayout>mon bouton</BaseLayout>
-      <BaseLayout :isDisabled="true">Bouton Désactivé</BaseLayout>
+      <BaseLayout>BaseButton</BaseLayout>
+      <BaseLayout color="warn">BaseButton with color props</BaseLayout>
+      <BaseLayout color="danger">BaseButton with color props</BaseLayout>
+      <BaseLayout color="danger" :isDisabled="true">BaseButton Disabled</BaseLayout>
+      <AsyncButton :onClick="effectuerTacheAsync">Disabled and Animated</AsyncButton>
     </div>
 
     <footer>
@@ -65,9 +68,23 @@ body {
 
 <script>
 import BaseLayout from './BaseLayout.vue';
+import AsyncButton from './AsyncButton.vue';
+
 export default {
   components : {
-    BaseLayout
+    BaseLayout,
+    AsyncButton
+  },
+  methods: {
+    async effectuerTacheAsync() {
+      // Simulez une tâche asynchrone
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          console.log('Tâche asynchrone terminée');
+          resolve();
+        }, 2000);
+      });
+    },
   },
   data() {
     return {
