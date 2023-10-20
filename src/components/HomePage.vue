@@ -77,18 +77,21 @@ export default {
   },
   methods: {
     async effectuerTacheAsync() {
-      // Simulez une tâche asynchrone
+      // Temps d'attente de deux secondes
+      this.methodCallCount++;
+      var timer = 2000 + this.methodCallCount * 1000
       return new Promise((resolve) => {
         setTimeout(() => {
           console.log('Tâche asynchrone terminée');
           resolve();
-        }, 2000);
+        }, timer);
       });
     },
   },
   data() {
     return {
-      message: "HomePage"
+      message: "HomePage",
+      methodCallCount: 0
     };
   }
 }
