@@ -7,14 +7,14 @@
 </template>
 
 <script>
-/*import BaseLayout from './components/BaseLayout.vue';*/
+
 import HomePage from './components/HomePage.vue';
 export default {
   components: {
-    HomePage
-    
+    HomePage,
   },
 }
+
 </script>
 
 <style>

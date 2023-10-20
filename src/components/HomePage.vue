@@ -6,6 +6,10 @@
       <a href="#">Services</a>
       <a href="#">Contact</a>
     </div>
+    <div class="content">
+      <BaseLayout>mon bouton</BaseLayout>
+      <BaseLayout :isDisabled="true">Bouton Désactivé</BaseLayout>
+    </div>
 
     <footer>
       <p>&copy; 2023 MyvueProject. Tous droits réservés. | <a href="/politique-de-confidentialite">Politique de confidentialité</a> | <a href="/conditions-dutilisation">Conditions d'utilisation</a></p>
@@ -58,8 +62,13 @@ body {
     }
 </style>
 
+
 <script>
+import BaseLayout from './BaseLayout.vue';
 export default {
+  components : {
+    BaseLayout
+  },
   data() {
     return {
       message: "HomePage"
