@@ -26,10 +26,10 @@ export default {
       user: null,
     };
   },
-  
+
   methods: {
     updateUser(newUser) {
-      this.user = newUser; // Mettez à jour la variable "user" avec la nouvelle valeur
+      this.user = newUser; // Mettre à jour la variable "user" avec la nouvelle valeur
     },
   },
   
