@@ -1,10 +1,10 @@
 <template>
   <BaseHeader></BaseHeader>
-  <SigninButton @updateUser="updateUser"></SigninButton>
+  <SigninButton></SigninButton>       <!--<SigninButton @updateUser="updateUser"></SigninButton>--><!--ancienne méthode de transmission-->
   <div v-if="user">
       <!-- Affichez l'utilisateur si user n'est pas null -->
       User: {{ user }}
-    </div>
+  </div>
   <BaseFooter></BaseFooter>
 </template>
 
@@ -21,7 +21,7 @@ export default {
     BaseFooter
   },
 
-  data() {
+  /*data() {
     return {
       user: null,
     };
@@ -32,6 +32,8 @@ export default {
       this.user = newUser; // Mettre à jour la variable "user" avec la nouvelle valeur
     },
   },
+
+  inject: ['user'],*/          /*ancienne methode de transmission*/
   
 }
 

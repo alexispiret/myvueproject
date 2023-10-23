@@ -10,26 +10,28 @@
 
 <script>
 import {signInAndGetUser} from '/src/lib/microsoftGraph.js'
+import { mapMutations } from 'vuex';
 
 
 export default {
     
 
     methods: {
-
-    async signIn()
+        ...mapMutations(['setUser']), // Map the setUser mutation
+        async signIn()
     {
-    try
-    {   const authResult= await signInAndGetUser()
-        console.log(authResult.name)
-        const user = authResult.name;
-        this.updateUser(user);
-    }
-    catch(error)
-    {
-    console.error(error)
-    }
-  },
+        try
+            {   const authResult= await signInAndGetUser()
+                console.log(authResult.name)
+                const user = authResult.name;
+                this.setUser(user); // Commit the setUser mutation
+                /*this.updateUser(user);*/ /*ancienne méthode*/
+            }
+        catch(error)
+            {
+                console.error(error)
+            }
+    },
 
   updateUser(newUser) {
       this.$emit('updateUser', newUser);
@@ -37,7 +39,13 @@ export default {
   
 },
 
-    props: ['user'],
+    /*props: ['user'], */       /* n'est plus utile car transmission par provide/inject */
+
+    provide() {
+        return {
+            user: this.user,
+        };
+    },
 }
 
 </script>
