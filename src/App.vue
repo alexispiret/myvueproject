@@ -1,17 +1,18 @@
 <template>
   
   <div>
-    <HomePage></HomePage>
+    <BaseLayout></BaseLayout>
   </div>
 
 </template>
 
 <script>
+import BaseLayout from '/src/components/BaseLayout.vue';
 
-import HomePage from './components/HomePage.vue';
 export default {
   components: {
-    HomePage,
+    BaseLayout,
+    
   },
 }
 

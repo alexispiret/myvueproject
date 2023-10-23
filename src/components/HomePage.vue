@@ -67,12 +67,12 @@ body {
 
 
 <script>
-import BaseLayout from './BaseLayout.vue';
+import BaseButton from './BaseButton.vue';
 import AsyncButton from './AsyncButton.vue';
 
 export default {
   components : {
-    BaseLayout,
+    BaseButton,
     AsyncButton
   },
   methods: {
