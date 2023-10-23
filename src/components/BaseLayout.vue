@@ -1,37 +1,24 @@
 <template>
-  
-  <div>
-    <BaseHeader></BaseHeader>
-    <div class="content">
-      
-    </div>
-    <BaseFooter></BaseFooter>
-  </div>
-
+  <BaseHeader></BaseHeader>
+  <SigninButton></SigninButton>
+  <BaseFooter></BaseFooter>
 </template>
 
 <script>
 
-import BaseHeader from '/src/components/BaseHeader.vue';
-import BaseFooter from '/src/components/BaseFooter.vue';
+import BaseHeader from '/src/components/BaseHeader.vue'
+import BaseFooter from '/src/components/BaseFooter.vue'
+import SigninButton from '/src/components/SigninButton.vue'
 
 export default {
   components: {
+    SigninButton,
     BaseHeader,
     BaseFooter
   },
+  
+  
 }
 
 </script>
 
-<style>
-  
-/*#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}*/
-</style>

@@ -7,9 +7,7 @@
       <a href="#">Contact</a>
     </div>
     <div class="content">
-      <BaseLayout>BaseButton</BaseLayout>
-      <BaseLayout color="warn">BaseButton with color props</BaseLayout>
-      <BaseLayout color="danger">BaseButton with color props</BaseLayout>
+    
       <BaseLayout color="danger" :isDisabled="true">BaseButton Disabled</BaseLayout>
       <AsyncButton :onClick="effectuerTacheAsync">Disabled and Animated</AsyncButton>
     </div>

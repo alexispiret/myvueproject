@@ -51,7 +51,7 @@ export default {
 }
 </style>-->
 <template>
-  <BaseLayout
+  <BaseButton
     :disabled="isPending"
     :color="color"
     @click.stop.prevent="handleClick"
@@ -61,15 +61,15 @@ export default {
       pulse
     />
     <slot />
-  </BaseLayout>
+  </BaseButton>
 </template>
 
 <script>
-import BaseLayout from './BaseLayout.vue'
+import BaseButton from './BaseButton.vue'
 
 export default {
   name: 'AsyncButton',
-  components: { BaseLayout },
+  components: { BaseButton },
   inheritAttrs: false,
 
   props: {
