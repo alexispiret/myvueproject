@@ -1,6 +1,10 @@
 <template>
   <BaseHeader></BaseHeader>
-  <SigninButton></SigninButton>
+  <SigninButton @updateUser="updateUser"></SigninButton>
+  <div v-if="user">
+      <!-- Affichez l'utilisateur si user n'est pas null -->
+      User: {{ user }}
+    </div>
   <BaseFooter></BaseFooter>
 </template>
 
@@ -16,7 +20,18 @@ export default {
     BaseHeader,
     BaseFooter
   },
+
+  data() {
+    return {
+      user: null,
+    };
+  },
   
+  methods: {
+    updateUser(newUser) {
+      this.user = newUser; // Mettez à jour la variable "user" avec la nouvelle valeur
+    },
+  },
   
 }
 
