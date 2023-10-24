@@ -18,7 +18,7 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      component: () => import('@/views/NewPageRouter.vue'), // Import the NewPageRouter component
+      component: () => import('@/components/BaseLayout.vue'), // Import the BaseLayout component
     },
     {
       path: '/conversations',

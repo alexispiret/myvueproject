@@ -1,7 +1,6 @@
 <template>
   
   <div>
-    <BaseLayout></BaseLayout>
     <router-view></router-view>
   </div>
 
