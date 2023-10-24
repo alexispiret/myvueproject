@@ -1,9 +1,11 @@
 <template>
   <BaseHeader></BaseHeader>
+  
   <SigninButton></SigninButton>       <!--<SigninButton @updateUser="updateUser"></SigninButton>--><!--ancienne méthode de transmission-->
   <div v-if="user">
       <!-- Affichez l'utilisateur si user n'est pas null -->
       User: {{ user }}
+      <router-link to="/conversations">Conversations</router-link>
   </div>
   <BaseFooter></BaseFooter>
 </template>
