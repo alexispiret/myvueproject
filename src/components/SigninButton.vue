@@ -10,14 +10,14 @@
 
 <script>
 import {signInAndGetUser} from '/src/lib/microsoftGraph.js'
-import { mapMutations } from 'vuex';
+/*import { mapMutations } from 'vuex';*/  //pas besoin de mapMutations car on utilise directement this.$store.commit pour déclencher la mutation.
 
 
 export default {
     
 
     methods: {
-        ...mapMutations(['setUser']), // Map the setUser mutation
+        
         async signIn()
     {
         try
@@ -34,7 +34,7 @@ export default {
             }
     },
 
-  updateUser(newUser) {
+    updateUser(newUser) {
       this.$emit('updateUser', newUser);
     },
   
