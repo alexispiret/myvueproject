@@ -22,9 +22,10 @@ export default {
     {
         try
             {   const authResult= await signInAndGetUser()
-                console.log(authResult.name)
+                /*console.log(authResult.name)*/
                 const user = authResult.name;
-                this.setUser(user); // Commit the setUser mutation
+                this.$store.commit('setUser', user); // Commit the setUser mutation in the store
+                /*this.setUser(user);*/ // Commit the setUser mutation
                 /*this.updateUser(user);*/ /*ancienne méthode*/
             }
         catch(error)
@@ -37,15 +38,15 @@ export default {
       this.$emit('updateUser', newUser);
     },
   
-},
+    },
 
     /*props: ['user'], */       /* n'est plus utile car transmission par provide/inject */
 
-    provide() {
+    /*provide() {
         return {
             user: this.user,
         };
-    },
+    },*/ //ancienne méthode provide/inject
 }
 
 </script>

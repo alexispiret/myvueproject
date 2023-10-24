@@ -21,6 +21,12 @@ export default {
     BaseFooter
   },
 
+  computed: {
+    user() {
+      return this.$store.state.user; // Access user from the store
+    },
+  },
+
   /*data() {
     return {
       user: null,
