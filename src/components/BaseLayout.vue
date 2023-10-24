@@ -21,7 +21,7 @@ export default {
     BaseFooter
   },
 
-  computed: {
+  computed: {     //méthode de transmission avec store.js
     user() {
       return this.$store.state.user; // Access user from the store
     },
@@ -33,13 +33,13 @@ export default {
     };
   },
 
-  methods: {
+  methods: {      // méthode de transmission avec props/methods
     updateUser(newUser) {
       this.user = newUser; // Mettre à jour la variable "user" avec la nouvelle valeur
     },
   },
 
-  inject: ['user'],*/        /*ancienne methode de transmission*/
+  inject: ['user'],*/        //méthode de transmission avec provide/inject
   
 }
 
