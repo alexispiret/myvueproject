@@ -34,9 +34,9 @@ export default {
             }
     },
 
-    updateUser(newUser) {
+    /*updateUser(newUser) {
       this.$emit('updateUser', newUser);
-    },
+    },*/
   
     },
 
