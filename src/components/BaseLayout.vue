@@ -5,7 +5,7 @@
   <div v-if="user">
       <!-- Affichez l'utilisateur si user n'est pas null -->
       User: {{ user }}
-      <router-link to="/conversations">Conversations</router-link>
+      <router-link to="/conversations">Conversations</router-link> <!--display the conversations page link if user is login-->
   </div>
   <BaseFooter></BaseFooter>
 </template>
