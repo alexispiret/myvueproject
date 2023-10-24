@@ -21,13 +21,13 @@ export default {
     BaseFooter
   },
 
-  /*computed: {
+  computed: {
     user() {
       return this.$store.state.user; // Access user from the store
     },
-  },*/
+  },
 
-  data() {
+  /*data() {
     return {
       user: null,
     };
@@ -39,7 +39,7 @@ export default {
     },
   },
 
-  inject: ['user'],        /*ancienne methode de transmission*/
+  inject: ['user'],*/        /*ancienne methode de transmission*/
   
 }
 
