@@ -1,4 +1,8 @@
-<template>
+<template>    <!-- IMPORTANT CE FICHIER NE CONCERNE QUE LE TP3 IL N4EST DONC PLUS UTILE -->
+
+
+<!--
+
   <body>
     <div class="navbar">
       <a href="#">Accueil</a>
@@ -94,3 +98,5 @@ export default {
   }
 }
 </script>
+
+-->
