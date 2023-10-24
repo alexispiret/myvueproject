@@ -33,7 +33,7 @@ export default {
     },
   },
 
-  inject: ['user'],*/          /*ancienne methode de transmission*/
+  inject: ['user'],*/         /*ancienne methode de transmission*/
   
 }
 
