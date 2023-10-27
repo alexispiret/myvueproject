@@ -12,6 +12,7 @@ const router = createRouter({
 export default router;*/
 
 import { createRouter, createWebHistory } from 'vue-router';
+import useAuthGuard from '/src/guards/auth-guard.js';
 
 const router = createRouter({
   history: createWebHistory(),
@@ -19,12 +20,16 @@ const router = createRouter({
     {
       path: '/',
       component: () => import('@/components/BaseLayout.vue'), // Import the BaseLayout component
+      meta: { requiresAuth: true },
     },
     {
       path: '/conversations',
       component: () => import('@/views/ConversationsIndexPage.vue'), // Import the ConversationsIndexPage component
+      meta: { requiresAuth: true }, // Cette route nécessite une authentification
     },
   ],
 });
+
+router.beforeEach(useAuthGuard);
 
 export default router;

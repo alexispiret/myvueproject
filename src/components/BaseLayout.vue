@@ -1,11 +1,13 @@
 <template>
   <BaseHeader></BaseHeader>
   
+  <router-link to="/conversations" v-if="userIsLoggedIn" class="link-blue">Conversations</router-link>
+  <router-view :userIsLoggedIn="userIsLoggedIn" />
   <SigninButton></SigninButton>       <!--<SigninButton @updateUser="updateUser"></SigninButton>--><!--ancienne méthode de transmission-->
   <div v-if="user">
       <!-- Affichez l'utilisateur si user n'est pas null -->
       User: {{ user }}
-      <router-link to="/conversations">Conversations</router-link> <!--display the conversations page link if user is login-->
+      <!--<router-link to="/conversations">Conversations</router-link>--> <!--display the conversations page link if user is login avant guard-->
   </div>
   <BaseFooter></BaseFooter>
 </template>
@@ -27,6 +29,9 @@ export default {
     user() {
       return this.$store.state.user; // Access user from the store
     },
+    userIsLoggedIn() {
+      return this.$store.state.userIsLoggedIn;
+    },
   },
 
   /*data() {
@@ -46,4 +51,9 @@ export default {
 }
 
 </script>
+
+<style>
+.link-blue {
+  color: blue;}
+</style>
 
