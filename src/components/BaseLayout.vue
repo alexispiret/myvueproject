@@ -29,9 +29,7 @@ export default {
     user() {
       return this.$store.state.user; // Access user from the store
     },
-    userIsLoggedIn() {
-      return this.$store.state.userIsLoggedIn;
-    },
+    
   },
 
   /*data() {

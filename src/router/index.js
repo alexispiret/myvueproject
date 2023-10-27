@@ -20,7 +20,7 @@ const router = createRouter({
     {
       path: '/',
       component: () => import('@/components/BaseLayout.vue'), // Import the BaseLayout component
-      meta: { requiresAuth: true },
+      
     },
     {
       path: '/conversations',

@@ -1,4 +1,4 @@
-import { useRouter } from 'vue-router';
+
 import store from '/src/lib/store.js';
 
 export default function useAuthGuard(to, from, next) {
